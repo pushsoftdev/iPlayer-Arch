@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'iPlayer_Example' do
+  pod 'iPlayer', :path => '../'
+
+  target 'iPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
