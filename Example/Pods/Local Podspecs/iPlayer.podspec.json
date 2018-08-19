@@ -1,0 +1,22 @@
+{
+  "name": "iPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of iPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pushsoftdev@gmail.com/iPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pushsoftdev@gmail.com": "pushparaj.jayaseelan"
+  },
+  "source": {
+    "git": "https://github.com/pushsoftdev@gmail.com/iPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "iPlayer/Classes/**/*"
+}

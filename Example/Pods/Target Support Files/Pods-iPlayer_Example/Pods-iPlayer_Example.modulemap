@@ -1,0 +1,6 @@
+framework module Pods_iPlayer_Example {
+  umbrella header "Pods-iPlayer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

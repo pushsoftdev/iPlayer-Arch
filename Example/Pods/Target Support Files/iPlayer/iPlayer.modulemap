@@ -1,0 +1,6 @@
+framework module iPlayer {
+  umbrella header "iPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
