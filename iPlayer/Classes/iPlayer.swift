@@ -10,52 +10,38 @@ import AVKit
 
 public protocol IPlayerDelegate: class {
   func configure(in view: IPlayerView)
-  
   func prepare(with url: String)
-  
   func play()
-  
   func pause()
-  
   func stop()
-  
   func seekTo(time: Float)
-  
   func setVideoGravity(mode: AVLayerVideoGravity)
-  
   func reset()
 }
 
 public protocol IPlayerViewDelegate: class {
   func player(updatedTo state: IPlayerState)
   
-  func player(updatedTo watchTime: TimeInterval,
-              and remainingTime: TimeInterval)
+  func player(updatedTo watchTime: String,
+              and remainingTime: String, with completedPercent: Float)
   
   func playerDidFinishPlaying()
-  
-  func player(failedWith error: IPlayerError)
+  func player(failedWith error: String?)
 }
 
 public enum IPlayerState {
   case preparing
-  
   case buffering
-  
   case playing
-  
   case paused
-  
   case stopped
-  
+  case end
   case error
-  
   case unknown
 }
 
 public enum IPlayerError {
   case unknown
-  
   case invalidVideoURL
 }
 
@@ -75,7 +61,15 @@ public class IPlayer: NSObject {
     }
   }
   
-  private var player: AVQueuePlayer?
+  private var player: AVQueuePlayer? {
+    willSet {
+      removePlayerObservers()
+    }
+    
+    didSet {
+      addPlayerObservers()
+    }
+  }
   
   private var playerLayer: AVPlayerLayer?
   
@@ -87,10 +81,27 @@ public class IPlayer: NSObject {
     }
   }
   
+  private var timeObserver: Any?
+  
   public weak var viewDelegate: IPlayerViewDelegate?
   
   private override init() {
     
+  }
+  
+  private func addPlayerObservers() {
+    timeObserver = player?.addPeriodicTimeObserver(forInterval: .init(value: 1, timescale: 1), queue: DispatchQueue.main, using: { [weak self] time in
+      guard let strongSelf = self else { return }
+      if let currentTime = strongSelf.player?.currentTime().seconds,
+        let totalDuration = strongSelf.player?.currentItem?.duration.seconds {
+        
+        strongSelf.handlePlayerTime(elapsedTime: currentTime, videoDuration: totalDuration)
+      }
+    })
+  }
+  
+  private func removePlayerObservers() {
+    player?.removeTimeObserver(timeObserver!)
   }
   
   private func registerPlayerItemEventHandlers() {
@@ -136,6 +147,22 @@ public class IPlayer: NSObject {
     }
   }
   
+  /// Creates the remaining duration of the video.
+  ///
+  /// - Parameters:
+  ///   - elapsedTime: Contains the elapsed time.
+  ///   - videoDuration: Contains the video duration.
+  func handlePlayerTime(elapsedTime: Float64, videoDuration: Float64) {
+    let elapsedTimeFormatted = String(format: "%02d:%02d:%02d", (lround(elapsedTime) / 3600), ((lround(elapsedTime) / 60) % 60), lround(elapsedTime) % 60)
+    
+    let timeRemaining: Float64 = videoDuration - elapsedTime
+    let timeRemaningFormatted = String(format: "%02d:%02d:%02d", (lround(timeRemaining) / 3600), ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
+    
+    let elapsedPercentage = elapsedTime / videoDuration // 0 to 1
+    viewDelegate?.player(updatedTo: elapsedTimeFormatted,
+                         and: timeRemaningFormatted, with: Float(elapsedPercentage))
+  }
+  
   private func handleBufferState() {
     pause()
     state = .buffering
@@ -149,6 +176,7 @@ public class IPlayer: NSObject {
       state = .playing
     case AVPlayerItemStatus.failed:
       state = .error
+      viewDelegate?.player(failedWith: playerItem?.error?.localizedDescription)
     }
   }
 }
@@ -168,7 +196,10 @@ extension IPlayer: IPlayerDelegate {
     }
     
     guard let assetPath = URL(string: url) else {
-      viewDelegate?.player(failedWith: .invalidVideoURL)
+//      viewDelegate?.player(failedWith: .invalidVideoURL)
+      #if DEBUG
+      print("No valid player URL found. Stop preparing...")
+      #endif
       return
     }
     
@@ -217,7 +248,7 @@ extension IPlayer: IPlayerDelegate {
     let elapsedTime = videoDuration * Float64(time)
     
     if videoDuration.isFinite {
-      viewDelegate?.player(updatedTo: elapsedTime, and: videoDuration)
+      handlePlayerTime(elapsedTime: elapsedTime, videoDuration: videoDuration)
       
       player.seek(to: CMTimeMakeWithSeconds(elapsedTime, 100)) { (completed) in
         self.state = .playing
@@ -252,7 +283,8 @@ extension IPlayer: IPlayerDelegate {
   }
   
   @objc func playerDidFinishPlaying(notification: Notification) {
-    
+    state = .end
+    viewDelegate?.player(updatedTo: .end)
   }
 }
 

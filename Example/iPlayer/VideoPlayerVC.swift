@@ -35,4 +35,11 @@ class VideoPlayerVC: BasePlayerVC {
     dismiss(animated: true, completion: nil)
   }
   
+  @IBAction func sliderTouchUpInsideHandler(_ sender: UISlider) {
+    
+  }
+  
+  
+  
+  
 }

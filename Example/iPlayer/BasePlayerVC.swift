@@ -15,6 +15,9 @@ class BasePlayerVC: UIViewController {
   @IBOutlet weak var labelTitle: UILabel?
   @IBOutlet weak var loaderPlayer: UIActivityIndicatorView!
   @IBOutlet weak var viewPlayerDisplay: IPlayerView!
+  @IBOutlet weak var labelRemainingTime: UILabel!
+  @IBOutlet weak var labelEllapsedTime: UILabel!
+  @IBOutlet weak var sliderDuration: Slider!
   
   let player = IPlayer.shared
   
@@ -29,7 +32,9 @@ class BasePlayerVC: UIViewController {
     return true
   }
   
-  
+  @IBAction func sliderValueChanged(_ sender: UISlider) {
+    
+  }
 }
 
 extension BasePlayerVC: IPlayerViewDelegate {
@@ -47,15 +52,21 @@ extension BasePlayerVC: IPlayerViewDelegate {
     }
   }
   
-  func player(updatedTo watchTime: TimeInterval, and remainingTime: TimeInterval) {
+  func player(updatedTo watchTime: String, and remainingTime: String, with completedPercent: Float) {
+    labelEllapsedTime.text = watchTime
+    labelRemainingTime.text = remainingTime
     
+    sliderDuration.value = completedPercent
   }
+  
   
   func playerDidFinishPlaying() {
     
   }
   
-  func player(failedWith error: IPlayerError) {
-    
+  func player(failedWith error: String?) {
+    if let error = error {
+      print(error)
+    }
   }
 }
