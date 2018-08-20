@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5FD6CD212A96CD0026FA45 /* BasePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6CC212A96CC0026FA45 /* BasePlayerVC.swift */; };
+		1F5FD6CF212A99460026FA45 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1F5FD6CE212A99460026FA45 /* Podfile */; };
+		1F9B0853212A0D15004E6792 /* VideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B0852212A0D15004E6792 /* VideoPlayerVC.swift */; };
 		47EBB3977C7F1ABD39A27F51 /* Pods_iPlayer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C33F7D88F60DB4CF207F48 /* Pods_iPlayer_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -29,7 +32,10 @@
 
 /* Begin PBXFileReference section */
 		18C33F7D88F60DB4CF207F48 /* Pods_iPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EF85491A9513C9334C77211 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1F5FD6CC212A96CC0026FA45 /* BasePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePlayerVC.swift; sourceTree = "<group>"; };
+		1F5FD6CE212A99460026FA45 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		1F9B0852212A0D15004E6792 /* VideoPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerVC.swift; sourceTree = "<group>"; };
+		2EF85491A9513C9334C77211 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4343B260C9D342562DE6E41D /* Pods-iPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlayer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPlayer_Tests/Pods-iPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5005AE7E4BF7B1262E27C488 /* Pods-iPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlayer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iPlayer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlayer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,11 +48,11 @@
 		607FACE51AFB9204008FA782 /* iPlayer_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPlayer_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		BD9EBE58FDA09D19A1BC61D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BD9EBE58FDA09D19A1BC61D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D06C377E8945A023DD40960E /* Pods_iPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB958F8927B92971ECCF945D /* Pods-iPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlayer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DF06D188C58AEDB376E3F2C5 /* Pods-iPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlayer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPlayer_Tests/Pods-iPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E96A06C3614DF487E5973CF4 /* iPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = iPlayer.podspec; path = ../iPlayer.podspec; sourceTree = "<group>"; };
+		E96A06C3614DF487E5973CF4 /* iPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iPlayer.podspec; path = ../iPlayer.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +108,15 @@
 		607FACD21AFB9204008FA782 /* Example for iPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				1F5FD6CE212A99460026FA45 /* Podfile */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				1F9B0852212A0D15004E6792 /* VideoPlayerVC.swift */,
+				1F5FD6CC212A96CC0026FA45 /* BasePlayerVC.swift */,
 			);
 			name = "Example for iPlayer";
 			path = iPlayer;
@@ -210,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -250,6 +259,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				1F5FD6CF212A99460026FA45 /* Podfile in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +382,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1F5FD6CD212A96CD0026FA45 /* BasePlayerVC.swift in Sources */,
+				1F9B0853212A0D15004E6792 /* VideoPlayerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,12 +437,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -478,12 +492,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -6,15 +6,15 @@
 //
 
 import UIKit
+import AVKit
 
-class IPlayerView: UIView {
+public class IPlayerView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+  override public static var layerClass: AnyClass {
+    return AVPlayerLayer.self
+  }
+  
+  public var playerLayer: AVPlayerLayer {
+    return layer as! AVPlayerLayer
+  }
 }

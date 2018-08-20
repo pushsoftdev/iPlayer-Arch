@@ -8,28 +8,31 @@
 
 import UIKit
 
-class VideoPlayerVC: UIViewController {
+class VideoPlayerVC: BasePlayerVC {
+  
+  @IBOutlet weak var constraintPlayerViewAspectRatio: NSLayoutConstraint!
+  @IBOutlet weak var constraintPlayerViewBottomToSuperView: NSLayoutConstraint!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  let videoAsset = "https://vod-a-802.cdn.nextologies.com/JUNE2018/YouAreMyDestiny_EP48.mp4"
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    constraintPlayerViewAspectRatio.isActive = false
+    constraintPlayerViewBottomToSuperView.isActive = true
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    player.configure(in: viewPlayerDisplay)
+    player.prepare(with: videoAsset)
+  }
+  
+  @IBAction func buttonCloseHandler(_ sender: UIButton) {
+    player.reset()
+    
+    dismiss(animated: true, completion: nil)
+  }
+  
 }
