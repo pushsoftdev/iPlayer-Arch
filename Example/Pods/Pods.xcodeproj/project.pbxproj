@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		12D1B08B1F723BE15FD5A229C4AA87AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		17E890003AF3E787C567BCC4F03EA0C2 /* Pods-iPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */; };
-		1CEA419BF6A6355F76481ED2F7543FEE /* IPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94426823224CA60154563EB0D26BEB2 /* IPlayerView.swift */; };
-		1D232782F4FC48C28A45A43F7B9B8641 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF7E735A243DBBE6F059722F885C3B /* ReplaceMe.swift */; };
+		1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D4212B6B060026FA45 /* iPlayer.swift */; };
+		1F5FD6D8212B6B060026FA45 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */; };
+		1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */; };
 		53A17277ADC29ED6C4FD8DC47E00AA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		547A7CF9D6E9055BA94BD798A0D3B7A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		57DC6CF3BD75BA42A910841353F257BA /* Pods-iPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F690FE7228334971F2B2FD74A8F19118 /* Pods-iPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		628AF4A4C6870F33F186F1D7A19219C0 /* Pods-iPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B41AB44235CB43B38697974010000C9 /* Pods-iPlayer_Tests-dummy.m */; };
-		646FAD2967D129808AE5BADEF0296A0A /* iPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201EF295423B6C6FD425FC664BE30CF /* iPlayer.swift */; };
 		6B939777E05DBA97E617D7CB55EBE933 /* iPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6CFC4E6774439635156616E26994A4 /* iPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A489820730B8B92D8E9D71172E17BCDC /* Pods-iPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40EEF1F2820BD8CFE7AD3D2796097EA0 /* Pods-iPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C593B4A0ECB2F9FF646F19F6E73AA3BF /* iPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1479F430089CECA209881D97221F3B /* iPlayer-dummy.m */; };
@@ -33,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		13C3EEAF317D5BCA04DF2A17FC7D55FB /* Pods-iPlayer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		1F5FD6D4212B6B060026FA45 /* iPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPlayer.swift; path = iPlayer/iPlayer.swift; sourceTree = "<group>"; };
+		1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = iPlayer/ReplaceMe.swift; sourceTree = "<group>"; };
+		1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IPlayerView.swift; path = iPlayer/IPlayerView.swift; sourceTree = "<group>"; };
 		33E1A0DB8CC740589DF14263C5A25967 /* Pods_iPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3640598D170F4A2643B4EBDE93CCBE36 /* Pods-iPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-resources.sh"; sourceTree = "<group>"; };
 		3AB9539709883024B50854B356E38BFD /* iPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-prefix.pch"; sourceTree = "<group>"; };
@@ -51,13 +54,10 @@
 		A4C094CA6BABAC0840F653D8DA966CB7 /* iPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD91C00CCEF19B1C64231AEF9A3184C2 /* Pods-iPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPlayer_Example.modulemap"; sourceTree = "<group>"; };
 		AE942DB18476BB1DB2A2F7AF1C0CAE65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0BF7E735A243DBBE6F059722F885C3B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = iPlayer/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		B13F9F5DAFCB802E493951C4891DDD0E /* Pods_iPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPlayer_Example-dummy.m"; sourceTree = "<group>"; };
 		B483CEDA079C6B311A9529B8AA6FA34E /* iPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iPlayer.modulemap; sourceTree = "<group>"; };
 		B9E93B8831E2C2AA982D6C2994F6518B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D201EF295423B6C6FD425FC664BE30CF /* iPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iPlayer.swift; path = iPlayer/Classes/iPlayer.swift; sourceTree = "<group>"; };
-		D94426823224CA60154563EB0D26BEB2 /* IPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPlayerView.swift; path = iPlayer/Classes/IPlayerView.swift; sourceTree = "<group>"; };
 		DA6CFC4E6774439635156616E26994A4 /* iPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-umbrella.h"; sourceTree = "<group>"; };
 		DEDAC9F228EDF0FF7BDD82E876736A2A /* Pods-iPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E09A88B2C40DB073716FB655486C81C3 /* Pods-iPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,9 +134,9 @@
 		7D7307E1F18CDD1668A8E2A462BC9A45 /* iPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D201EF295423B6C6FD425FC664BE30CF /* iPlayer.swift */,
-				D94426823224CA60154563EB0D26BEB2 /* IPlayerView.swift */,
-				B0BF7E735A243DBBE6F059722F885C3B /* ReplaceMe.swift */,
+				1F5FD6D4212B6B060026FA45 /* iPlayer.swift */,
+				1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */,
+				1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */,
 				B3145330693E90CD9E706DA4BBA63BE4 /* Support Files */,
 			);
 			name = iPlayer;
@@ -302,6 +302,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					8363B3F3AF11C6F894A8C6F486DC9E4B = {
+						LastSwiftMigration = 0940;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -335,10 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5FD6D8212B6B060026FA45 /* ReplaceMe.swift in Sources */,
+				1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */,
+				1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */,
 				C593B4A0ECB2F9FF646F19F6E73AA3BF /* iPlayer-dummy.m in Sources */,
-				646FAD2967D129808AE5BADEF0296A0A /* iPlayer.swift in Sources */,
-				1CEA419BF6A6355F76481ED2F7543FEE /* IPlayerView.swift in Sources */,
-				1D232782F4FC48C28A45A43F7B9B8641 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -558,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
