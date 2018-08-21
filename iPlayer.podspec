@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/pushsoftdev/iPlayer.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/devpushpa91'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.3'
 
   s.source_files = 'iPlayer/**/*'
   

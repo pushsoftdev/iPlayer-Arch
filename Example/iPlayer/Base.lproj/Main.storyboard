@@ -71,47 +71,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="KA4-U2-Zis">
-                                <rect key="frame" x="177" y="115" width="20" height="20"/>
-                            </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWP-q4-sEr" userLabel="ViewSliderHolder">
-                                <rect key="frame" x="0.0" y="174.5" width="375" height="56.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDi-zL-zbc">
-                                        <rect key="frame" x="10" y="5" width="49" height="13.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryi-E2-TJI">
-                                        <rect key="frame" x="316" y="5" width="49" height="13.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RGg-ZR-If6" customClass="Slider" customModule="iPlayer_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="23.5" width="377" height="31"/>
-                                        <color key="minimumTrackTintColor" red="0.78786349830000002" green="0.2326931424" blue="0.24240451390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <action selector="sliderTouchUpInsideHandler:" destination="uMs-en-jVL" eventType="touchUpInside" id="NIi-GS-Pdl"/>
-                                            <action selector="sliderValueChanged:" destination="uMs-en-jVL" eventType="valueChanged" id="9OO-EJ-3bx"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3008882705479452" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RGg-ZR-If6" secondAttribute="bottom" constant="3" id="BYT-z4-bSa"/>
-                                    <constraint firstItem="RGg-ZR-If6" firstAttribute="leading" secondItem="NWP-q4-sEr" secondAttribute="leading" constant="2" id="Cn5-qm-Im1"/>
-                                    <constraint firstItem="RGg-ZR-If6" firstAttribute="top" secondItem="xDi-zL-zbc" secondAttribute="bottom" constant="5" id="OtF-dw-ZFk"/>
-                                    <constraint firstItem="xDi-zL-zbc" firstAttribute="leading" secondItem="NWP-q4-sEr" secondAttribute="leading" constant="10" id="QpC-hb-dCo"/>
-                                    <constraint firstAttribute="trailing" secondItem="RGg-ZR-If6" secondAttribute="trailing" id="S9e-UG-Dw8"/>
-                                    <constraint firstItem="Ryi-E2-TJI" firstAttribute="top" secondItem="NWP-q4-sEr" secondAttribute="top" constant="5" id="UvL-2q-cAk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ryi-E2-TJI" secondAttribute="trailing" constant="10" id="fO2-Qb-umx"/>
-                                    <constraint firstItem="xDi-zL-zbc" firstAttribute="top" secondItem="NWP-q4-sEr" secondAttribute="top" constant="5" id="pBD-z7-fZh"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipf-tu-8kb" userLabel="ViewTopNavBar">
                                 <rect key="frame" x="0.0" y="20" width="375" height="40"/>
                                 <subviews>
@@ -131,7 +90,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2989619006849315" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70224208047945202" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8fx-pl-tTb"/>
                                     <constraint firstItem="jr4-Ge-4hC" firstAttribute="leading" secondItem="zPs-l7-4ar" secondAttribute="trailing" constant="10" id="Tjj-4X-4ae"/>
@@ -149,17 +108,12 @@
                         <constraints>
                             <constraint firstItem="ipf-tu-8kb" firstAttribute="leading" secondItem="6Lh-31-4to" secondAttribute="leading" id="3j8-vk-QX2"/>
                             <constraint firstAttribute="trailing" secondItem="d5a-5O-UXT" secondAttribute="trailing" id="3ko-B3-5Vk"/>
-                            <constraint firstItem="KA4-U2-Zis" firstAttribute="centerY" secondItem="d5a-5O-UXT" secondAttribute="centerY" id="5uw-sQ-tr2"/>
                             <constraint firstItem="2vv-Pb-oiv" firstAttribute="top" secondItem="d5a-5O-UXT" secondAttribute="bottom" id="84H-2Y-sIN"/>
                             <constraint firstItem="2vv-Pb-oiv" firstAttribute="leading" secondItem="6Lh-31-4to" secondAttribute="leading" id="BLo-Dx-BYj"/>
-                            <constraint firstItem="NWP-q4-sEr" firstAttribute="bottom" secondItem="d5a-5O-UXT" secondAttribute="bottom" id="EkC-yp-hx3"/>
                             <constraint firstItem="d5a-5O-UXT" firstAttribute="leading" secondItem="6Lh-31-4to" secondAttribute="leading" id="Jdv-oA-DuO"/>
                             <constraint firstItem="d5a-5O-UXT" firstAttribute="top" secondItem="6Z2-Hh-hB0" secondAttribute="bottom" id="O4I-YB-6Ru"/>
-                            <constraint firstItem="NWP-q4-sEr" firstAttribute="leading" secondItem="6Lh-31-4to" secondAttribute="leading" id="XoA-g1-X8Y"/>
                             <constraint firstAttribute="trailing" secondItem="ipf-tu-8kb" secondAttribute="trailing" id="bro-He-pQn"/>
-                            <constraint firstAttribute="trailing" secondItem="NWP-q4-sEr" secondAttribute="trailing" id="cO2-s1-GWU"/>
                             <constraint firstAttribute="bottom" secondItem="d5a-5O-UXT" secondAttribute="bottom" id="cZp-vT-Ra3"/>
-                            <constraint firstItem="KA4-U2-Zis" firstAttribute="centerX" secondItem="d5a-5O-UXT" secondAttribute="centerX" id="qyp-Tr-v1A"/>
                             <constraint firstAttribute="trailing" secondItem="2vv-Pb-oiv" secondAttribute="trailing" id="rKy-IZ-puv"/>
                             <constraint firstItem="ipf-tu-8kb" firstAttribute="top" secondItem="6Z2-Hh-hB0" secondAttribute="bottom" id="sEg-vk-BD1"/>
                             <constraint firstItem="PZq-6m-KNu" firstAttribute="top" secondItem="2vv-Pb-oiv" secondAttribute="bottom" id="wgd-fJ-jCx"/>
@@ -178,10 +132,6 @@
                     <connections>
                         <outlet property="constraintPlayerViewAspectRatio" destination="Hwp-ub-BvN" id="hqi-gy-cuf"/>
                         <outlet property="constraintPlayerViewBottomToSuperView" destination="cZp-vT-Ra3" id="jDD-qQ-mxG"/>
-                        <outlet property="labelEllapsedTime" destination="xDi-zL-zbc" id="cFa-Dh-jpC"/>
-                        <outlet property="labelRemainingTime" destination="Ryi-E2-TJI" id="Ffm-LQ-aA5"/>
-                        <outlet property="loaderPlayer" destination="KA4-U2-Zis" id="XjV-4l-NDn"/>
-                        <outlet property="sliderDuration" destination="RGg-ZR-If6" id="Vsy-5H-UU2"/>
                         <outlet property="viewPlayerDisplay" destination="d5a-5O-UXT" id="DtQ-8U-Haf"/>
                         <outlet property="viewTopNavBar" destination="ipf-tu-8kb" id="gyV-Ay-sxX"/>
                     </connections>

@@ -9,11 +9,6 @@
 import UIKit
 
 class Slider: UISlider {
-
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    
-  }
   
   override func draw(_ rect: CGRect) {
     super.draw(rect)
@@ -22,9 +17,4 @@ class Slider: UISlider {
     setThumbImage(#imageLiteral(resourceName: "slider_thumb"), for: .selected)
     setThumbImage(#imageLiteral(resourceName: "slider_thumb"), for: .highlighted)
   }
-  
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-
 }

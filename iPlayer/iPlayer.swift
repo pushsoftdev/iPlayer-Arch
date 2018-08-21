@@ -9,24 +9,13 @@ import UIKit
 import AVKit
 
 public protocol IPlayerDelegate: class {
-  func configure(in view: IPlayerView)
-  func prepare(with url: String)
-  func play()
-  func pause()
-  func stop()
-  func seekTo(time: Float)
-  func setVideoGravity(mode: AVLayerVideoGravity)
-  func reset()
-}
-
-public protocol IPlayerViewDelegate: class {
   func player(updatedTo state: IPlayerState)
   
   func player(updatedTo watchTime: String,
               and remainingTime: String, with completedPercent: Float)
   
   func playerDidFinishPlaying()
-  func player(failedWith error: String?)
+  func player(failedWith error: IPlayerError)
 }
 
 public enum IPlayerState {
@@ -40,9 +29,19 @@ public enum IPlayerState {
   case unknown
 }
 
-public enum IPlayerError {
+public enum IPlayerErrorType {
   case unknown
-  case invalidVideoURL
+  case invalidURL
+}
+
+public struct IPlayerError {
+  var type: IPlayerErrorType
+  var message: String
+  
+  init(type: IPlayerErrorType, message: String) {
+    self.type = type
+    self.message = message
+  }
 }
 
 public class IPlayer: NSObject {
@@ -77,13 +76,13 @@ public class IPlayer: NSObject {
   
   private var state: IPlayerState = .unknown {
     didSet {
-      viewDelegate?.player(updatedTo: state)
+      delegate?.player(updatedTo: state)
     }
   }
   
   private var timeObserver: Any?
   
-  public weak var viewDelegate: IPlayerViewDelegate?
+  public weak var delegate: IPlayerDelegate?
   
   private override init() {
     
@@ -159,7 +158,7 @@ public class IPlayer: NSObject {
     let timeRemaningFormatted = String(format: "%02d:%02d:%02d", (lround(timeRemaining) / 3600), ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
     
     let elapsedPercentage = elapsedTime / videoDuration // 0 to 1
-    viewDelegate?.player(updatedTo: elapsedTimeFormatted,
+    delegate?.player(updatedTo: elapsedTimeFormatted,
                          and: timeRemaningFormatted, with: Float(elapsedPercentage))
   }
   
@@ -176,12 +175,15 @@ public class IPlayer: NSObject {
       state = .playing
     case AVPlayerItemStatus.failed:
       state = .error
-      viewDelegate?.player(failedWith: playerItem?.error?.localizedDescription)
+      
+      if let reason = playerItem?.error?.localizedDescription {
+        let error = IPlayerError(type: .unknown, message: reason)
+        delegate?.player(failedWith: error)
+      }
     }
   }
-}
-
-extension IPlayer: IPlayerDelegate {
+  
+  // MARK: - Configuration Methods
   
   public func configure(in view: IPlayerView) {
     playerLayer = view.playerLayer
@@ -196,7 +198,7 @@ extension IPlayer: IPlayerDelegate {
     }
     
     guard let assetPath = URL(string: url) else {
-//      viewDelegate?.player(failedWith: .invalidVideoURL)
+      //      viewDelegate?.player(failedWith: .invalidVideoURL)
       #if DEBUG
       print("No valid player URL found. Stop preparing...")
       #endif
@@ -282,9 +284,12 @@ extension IPlayer: IPlayerDelegate {
     state = .unknown
   }
   
+  public func playerState() -> IPlayerState {
+    return state
+  }
+  
   @objc func playerDidFinishPlaying(notification: Notification) {
     state = .end
-    viewDelegate?.player(updatedTo: .end)
+    delegate?.player(updatedTo: .end)
   }
 }
-

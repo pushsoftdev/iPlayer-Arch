@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import iPlayer
 
-class VideoPlayerVC: BasePlayerVC {
+class VideoPlayerVC: UIViewController {
+  
+  @IBOutlet weak var viewTopNavBar: UIView?
+  @IBOutlet weak var labelTitle: UILabel?
+  @IBOutlet weak var viewPlayerDisplay: IPlayerView!
   
   @IBOutlet weak var constraintPlayerViewAspectRatio: NSLayoutConstraint!
   @IBOutlet weak var constraintPlayerViewBottomToSuperView: NSLayoutConstraint!
@@ -25,13 +30,12 @@ class VideoPlayerVC: BasePlayerVC {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    player.configure(in: viewPlayerDisplay)
-    player.prepare(with: videoAsset)
+    viewPlayerDisplay.loadVideo(with: videoAsset)
   }
   
   @IBAction func buttonCloseHandler(_ sender: UIButton) {
-    player.reset()
     
+    viewPlayerDisplay.destroy()
     dismiss(animated: true, completion: nil)
   }
   
@@ -39,7 +43,9 @@ class VideoPlayerVC: BasePlayerVC {
     
   }
   
-  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    viewPlayerDisplay.updateForOrientation(orientation: UIDevice.current.orientation)
+  }
   
   
 }
