@@ -55,6 +55,8 @@ public class IPlayer: NSObject {
     }
     
     didSet {
+      guard playerItem != nil else { return }
+      
       registerPlayerItemEventHandlers()
       registerPlayerEventNotificationHandlers()
     }
@@ -139,7 +141,7 @@ public class IPlayer: NSObject {
       } else if keyPath == #keyPath(AVPlayerItem.isPlaybackBufferEmpty) {
         if let playbackBufferEmpty = change?[.newKey] as? Bool {
           if playbackBufferEmpty {
-            handleBufferState()
+            state = .buffering
           }
         }
       }
@@ -162,15 +164,10 @@ public class IPlayer: NSObject {
                          and: timeRemaningFormatted, with: Float(elapsedPercentage))
   }
   
-  private func handleBufferState() {
-    pause()
-    state = .buffering
-  }
-  
   private func handlePlayerItemStatus(status: AVPlayerItemStatus) {
     switch status {
     case AVPlayerItemStatus.unknown:
-      handleBufferState()
+      state = .buffering
     case AVPlayerItemStatus.readyToPlay:
       state = .playing
     case AVPlayerItemStatus.failed:

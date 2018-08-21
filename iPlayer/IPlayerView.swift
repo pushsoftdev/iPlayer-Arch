@@ -39,6 +39,14 @@ public class IPlayerView: UIView {
     return layer as! AVPlayerLayer
   }
   
+  private var tapRecognizer: UITapGestureRecognizer!
+  
+  private var isControlsShowing = true {
+    willSet {
+      updateControlsVisibility(shouldShow: !isControlsShowing)
+    }
+  }
+  
   public override init(frame: CGRect) {
     super.init(frame: frame)
     
@@ -86,6 +94,35 @@ public class IPlayerView: UIView {
     
     player.delegate = self
     player.configure(in: self)
+    
+    configureTapRecognizer()
+  }
+  
+  private func configureTapRecognizer() {
+    tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+    isUserInteractionEnabled = true
+    addGestureRecognizer(tapRecognizer)
+  }
+  
+  @objc func tapHandler() {
+    isControlsShowing = !isControlsShowing
+  }
+  
+  private func updateControlsVisibility(shouldShow: Bool) {
+    var toAlpha: CGFloat!
+    
+    if !shouldShow {
+      toAlpha = 0.0
+    } else {
+      toAlpha = 1.0
+    }
+    
+    UIView.animate(withDuration: 0.3) {
+      self.bottomView.alpha = toAlpha
+      self.buttonPlayPause.alpha = toAlpha
+    }
+    
+    buttonPlayPause.isHidden = !shouldShow
   }
   
   public func loadVideo(with url: String) {
@@ -191,13 +228,16 @@ public class IPlayerView: UIView {
     
     addConstraints([constraintPlayPauseCenterXInSuperView, constraintPlayPauseCenterYInSuperView])
   }
-
+  
   @objc func buttonPlayPauseHandler() {
     let state = player.playerState()
-    if state == .playing {
+    switch state {
+    case .playing:
       player.pause()
-    } else if state == .paused {
+    case .paused, .stopped, .end:
       player.play()
+    default:
+      break
     }
   }
 }
@@ -231,11 +271,14 @@ extension IPlayerView: IPlayerDelegate {
     case .paused, .stopped:
       loader.stopAnimating()
       buttonPlayPause.setTitle("Play", for: .normal)
-      buttonPlayPause.isHidden = false
+      updateControlsVisibility(shouldShow: true)
     case .playing:
       buttonPlayPause.isHidden = false
       buttonPlayPause.setTitle("Pause", for: .normal)
       loader.stopAnimating()
+    case .end:
+      buttonPlayPause.setTitle("Play", for: .normal)
+      updateControlsVisibility(shouldShow: true)
     default:
       break
     }

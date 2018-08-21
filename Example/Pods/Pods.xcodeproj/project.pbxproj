@@ -10,7 +10,6 @@
 		12D1B08B1F723BE15FD5A229C4AA87AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		17E890003AF3E787C567BCC4F03EA0C2 /* Pods-iPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */; };
 		1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D4212B6B060026FA45 /* iPlayer.swift */; };
-		1F5FD6D8212B6B060026FA45 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */; };
 		1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */; };
 		53A17277ADC29ED6C4FD8DC47E00AA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		547A7CF9D6E9055BA94BD798A0D3B7A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		13C3EEAF317D5BCA04DF2A17FC7D55FB /* Pods-iPlayer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		1F5FD6D4212B6B060026FA45 /* iPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPlayer.swift; path = iPlayer/iPlayer.swift; sourceTree = "<group>"; };
-		1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = iPlayer/ReplaceMe.swift; sourceTree = "<group>"; };
 		1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IPlayerView.swift; path = iPlayer/IPlayerView.swift; sourceTree = "<group>"; };
 		33E1A0DB8CC740589DF14263C5A25967 /* Pods_iPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3640598D170F4A2643B4EBDE93CCBE36 /* Pods-iPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-resources.sh"; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			children = (
 				1F5FD6D4212B6B060026FA45 /* iPlayer.swift */,
 				1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */,
-				1F5FD6D5212B6B060026FA45 /* ReplaceMe.swift */,
 				B3145330693E90CD9E706DA4BBA63BE4 /* Support Files */,
 			);
 			name = iPlayer;
@@ -340,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5FD6D8212B6B060026FA45 /* ReplaceMe.swift in Sources */,
 				1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */,
 				1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */,
 				C593B4A0ECB2F9FF646F19F6E73AA3BF /* iPlayer-dummy.m in Sources */,
