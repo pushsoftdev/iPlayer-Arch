@@ -11,8 +11,8 @@ import AVKit
 public protocol IPlayerDelegate: class {
   func player(updatedTo state: IPlayerState)
   
-  func player(updatedTo watchTime: String,
-              and remainingTime: String, with completedPercent: Float)
+  func player(updatedTo watchTime: Float64,
+              and remainingTime: Float64)
   
   func playerDidFinishPlaying()
   func player(failedWith error: IPlayerError)
@@ -62,7 +62,7 @@ public class IPlayer: NSObject {
     }
   }
   
-  private var player: AVQueuePlayer? {
+  private var player: AVPlayer? {
     willSet {
       removePlayerObservers()
     }
@@ -91,12 +91,16 @@ public class IPlayer: NSObject {
   }
   
   private func addPlayerObservers() {
-    timeObserver = player?.addPeriodicTimeObserver(forInterval: .init(value: 1, timescale: 1), queue: DispatchQueue.main, using: { [weak self] time in
+    timeObserver = player?.addPeriodicTimeObserver(forInterval: .init(value: 1, timescale: 1), queue: DispatchQueue.main, using: { [weak self] elapsedTime in
       guard let strongSelf = self else { return }
-      if let currentTime = strongSelf.player?.currentTime().seconds,
-        let totalDuration = strongSelf.player?.currentItem?.duration.seconds {
-        
-        strongSelf.handlePlayerTime(elapsedTime: currentTime, videoDuration: totalDuration)
+      
+      guard let currentItem = strongSelf.player?.currentItem else { return }
+      
+      let currentTime = CMTimeGetSeconds(elapsedTime)
+      let totalDuration = CMTimeGetSeconds(currentItem.duration)
+      
+      if totalDuration.isFinite {
+        strongSelf.delegate?.player(updatedTo: currentTime, and: totalDuration)
       }
     })
   }
@@ -148,22 +152,6 @@ public class IPlayer: NSObject {
     }
   }
   
-  /// Creates the remaining duration of the video.
-  ///
-  /// - Parameters:
-  ///   - elapsedTime: Contains the elapsed time.
-  ///   - videoDuration: Contains the video duration.
-  func handlePlayerTime(elapsedTime: Float64, videoDuration: Float64) {
-    let elapsedTimeFormatted = String(format: "%02d:%02d:%02d", (lround(elapsedTime) / 3600), ((lround(elapsedTime) / 60) % 60), lround(elapsedTime) % 60)
-    
-    let timeRemaining: Float64 = videoDuration - elapsedTime
-    let timeRemaningFormatted = String(format: "%02d:%02d:%02d", (lround(timeRemaining) / 3600), ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
-    
-    let elapsedPercentage = elapsedTime / videoDuration // 0 to 1
-    delegate?.player(updatedTo: elapsedTimeFormatted,
-                         and: timeRemaningFormatted, with: Float(elapsedPercentage))
-  }
-  
   private func handlePlayerItemStatus(status: AVPlayerItemStatus) {
     switch status {
     case AVPlayerItemStatus.unknown:
@@ -205,7 +193,7 @@ public class IPlayer: NSObject {
     playerItem = AVPlayerItem(url: assetPath)
     
     if player == nil {
-      player = AVQueuePlayer(playerItem: playerItem)
+      player = AVPlayer(playerItem: playerItem)
       playerLayer?.player = player
       playerLayer?.videoGravity = .resizeAspect
       
@@ -225,7 +213,11 @@ public class IPlayer: NSObject {
     guard let player = player else { return }
     
     guard state != .playing &&
-      (state == .paused || state == .stopped) else { return }
+      (state == .paused || state == .stopped || state == .end) else { return }
+    
+    if state == .end || state == .stopped {
+      seekTo(time: 0.0)
+    }
     
     player.play()
     state = .playing
@@ -247,7 +239,7 @@ public class IPlayer: NSObject {
     let elapsedTime = videoDuration * Float64(time)
     
     if videoDuration.isFinite {
-      handlePlayerTime(elapsedTime: elapsedTime, videoDuration: videoDuration)
+      delegate?.player(updatedTo: elapsedTime, and: videoDuration)
       
       player.seek(to: CMTimeMakeWithSeconds(elapsedTime, 100)) { (completed) in
         self.state = .playing
@@ -266,7 +258,7 @@ public class IPlayer: NSObject {
     guard state != .unknown || state != .stopped else { return }
     
     player.pause()
-    player.seek(to: CMTimeMakeWithSeconds(0, 100))
+    seekTo(time: 0.0)
     state = .stopped
   }
   
@@ -283,6 +275,10 @@ public class IPlayer: NSObject {
   
   public func playerState() -> IPlayerState {
     return state
+  }
+  
+  public func currentItemDuration() -> CMTime? {
+    return playerItem?.duration
   }
   
   @objc func playerDidFinishPlaying(notification: Notification) {

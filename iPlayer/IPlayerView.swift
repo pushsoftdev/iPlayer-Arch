@@ -27,7 +27,7 @@ public class IPlayerView: UIView {
   
   open var buttonPlayPause: UIButton!
   
-  open var player = IPlayer.shared
+  open var iPlayer = IPlayer.shared
   
   public weak var delegage: IPlayerViewDelegate?
   
@@ -41,11 +41,18 @@ public class IPlayerView: UIView {
   
   private var tapRecognizer: UITapGestureRecognizer!
   
+  private var doubleTapRecognizer: UITapGestureRecognizer!
+  
+  private var videoMode: AVLayerVideoGravity = .resizeAspect
+  
   private var isControlsShowing = true {
     willSet {
       updateControlsVisibility(shouldShow: !isControlsShowing)
     }
   }
+  
+  // Constraints
+  private var constraintBottomViewBottomToSuperView: NSLayoutConstraint!
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -92,20 +99,38 @@ public class IPlayerView: UIView {
     
     configureAutoLayout()
     
-    player.delegate = self
-    player.configure(in: self)
+    iPlayer.delegate = self
+    iPlayer.configure(in: self)
+    
+    isUserInteractionEnabled = true
     
     configureTapRecognizer()
+    configureDoubleTapRecognizer()
   }
   
   private func configureTapRecognizer() {
     tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-    isUserInteractionEnabled = true
+    addGestureRecognizer(tapRecognizer)
+  }
+  
+  private func configureDoubleTapRecognizer() {
+    tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapHandler))
+    tapRecognizer.numberOfTapsRequired = 2
     addGestureRecognizer(tapRecognizer)
   }
   
   @objc func tapHandler() {
     isControlsShowing = !isControlsShowing
+  }
+  
+  @objc func doubleTapHandler() {
+    if videoMode == .resizeAspect {
+      videoMode = .resizeAspectFill
+    } else if videoMode == .resizeAspectFill {
+      videoMode = .resizeAspect
+    }
+    
+    iPlayer.setVideoGravity(mode: videoMode)
   }
   
   private func updateControlsVisibility(shouldShow: Bool) {
@@ -126,27 +151,37 @@ public class IPlayerView: UIView {
   }
   
   public func loadVideo(with url: String) {
-    player.prepare(with: url)
+    iPlayer.prepare(with: url)
   }
   
   public func updateForOrientation(orientation: UIDeviceOrientation) {
     if orientation.isLandscape {
-      bottomView.layer.cornerRadius = 5
+      bottomView.layer.cornerRadius = 10
+      constraintBottomViewBottomToSuperView.constant = -10
     } else {
       bottomView.layer.cornerRadius = 0
+      constraintBottomViewBottomToSuperView.constant = 0
     }
   }
   
   public func destroy() {
-    player.reset()
+    iPlayer.reset()
   }
   
   private func configureSlider() {
+    sliderDuration.minimumValue = 0
+    sliderDuration.maximumValue = 1
+    
     sliderDuration.maximumTrackTintColor =
       UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 0.5)
     sliderDuration.minimumTrackTintColor =
       UIColor(red: 204.0 / 255.0, green: 8.0 / 255.0, blue: 8.0 / 255.0, alpha: 1.0)
-    sliderDuration.thumbTintColor = .clear
+    //sliderDuration.thumbTintColor = .clear
+    
+    sliderDuration.addTarget(self, action: #selector(sliderValueChangeHandler), for: .valueChanged)
+    sliderDuration.addTarget(self, action: #selector(sliderBeginTracking), for: .touchDown)
+    sliderDuration.addTarget(self, action: #selector(sliderEndTracking), for: .touchUpInside)
+    sliderDuration.addTarget(self, action: #selector(sliderEndTracking), for: .touchUpOutside)
   }
   
   private func configureDurationLabel(label: UILabel) {
@@ -178,7 +213,7 @@ public class IPlayerView: UIView {
   }
   
   private func layoutBottomView() {
-    let constraintBottomViewBottomToSuperView = NSLayoutConstraint(item: bottomView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
+     constraintBottomViewBottomToSuperView = NSLayoutConstraint(item: bottomView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
     
     let constraintBottomViewLeadingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .leadingMargin, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0)
     
@@ -230,15 +265,58 @@ public class IPlayerView: UIView {
   }
   
   @objc func buttonPlayPauseHandler() {
-    let state = player.playerState()
+    let state = iPlayer.playerState()
     switch state {
     case .playing:
-      player.pause()
+      iPlayer.pause()
     case .paused, .stopped, .end:
-      player.play()
+      iPlayer.play()
     default:
       break
     }
+  }
+  
+  @objc func sliderValueChangeHandler() {
+    guard let duration = iPlayer.currentItemDuration() else { return }
+    
+    let videoDuration = CMTimeGetSeconds(duration)
+    let elapsedTime = videoDuration * Float64(sliderDuration.value)
+    
+    if videoDuration.isFinite {
+        handlePlayerTime(elapsedTime: elapsedTime, videoDuration: videoDuration)
+    }
+  }
+  
+  @objc func sliderBeginTracking() {
+    sliderDuration.thumbTintColor = .red
+    iPlayer.pause()
+    print("Slider Begin tracking")
+  }
+  
+  @objc func sliderEndTracking() {
+    sliderDuration.thumbTintColor = .clear
+    iPlayer.seekTo(time: sliderDuration.value)
+    print("Slider End tracking")
+  }
+  
+  /// Creates the remaining duration of the video.
+  ///
+  /// - Parameters:
+  ///   - elapsedTime: Contains the elapsed time.
+  ///   - videoDuration: Contains the video duration.
+  func handlePlayerTime(elapsedTime: Float64, videoDuration: Float64) {
+    let elapsedTimeFormatted = String(format: "%02d:%02d:%02d", (lround(elapsedTime) / 3600), ((lround(elapsedTime) / 60) % 60), lround(elapsedTime) % 60)
+    
+    let timeRemaining: Float64 = videoDuration - elapsedTime
+    let timeRemaningFormatted = String(format: "%02d:%02d:%02d", (lround(timeRemaining) / 3600), ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
+    
+    let elapsedPercentage = elapsedTime / videoDuration // 0 to 1
+    print("\(elapsedTime) totalDuration: \(videoDuration) Percent: \(elapsedPercentage)")
+    
+    labelElapsedTime.text = elapsedTimeFormatted
+    labelRemainingTime.text = timeRemaningFormatted
+    
+    sliderDuration.value = Float(elapsedPercentage)
   }
 }
 
@@ -248,11 +326,8 @@ extension IPlayerView: IPlayerDelegate {
     handlePlayer(state: state)
   }
   
-  public func player(updatedTo watchTime: String, and remainingTime: String, with completedPercent: Float) {
-    labelElapsedTime.text = watchTime
-    labelRemainingTime.text = remainingTime
-    
-    sliderDuration.value = completedPercent
+  public func player(updatedTo watchTime: Float64, and remainingTime: Float64) {
+    handlePlayerTime(elapsedTime: watchTime, videoDuration: remainingTime)
   }
   
   public func playerDidFinishPlaying() {
@@ -279,6 +354,7 @@ extension IPlayerView: IPlayerDelegate {
     case .end:
       buttonPlayPause.setTitle("Play", for: .normal)
       updateControlsVisibility(shouldShow: true)
+      sliderDuration.value = 1.0
     default:
       break
     }
