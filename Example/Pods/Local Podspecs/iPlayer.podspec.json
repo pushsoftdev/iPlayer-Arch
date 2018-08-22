@@ -17,7 +17,12 @@
   },
   "social_media_url": "https://twitter.com/devpushpa91",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.3"
   },
-  "source_files": "iPlayer/Classes/**/*"
+  "source_files": "iPlayer/**/*",
+  "resource_bundles": {
+    "iPlayerView": [
+      "Assets/**/*.xcassets"
+    ]
+  }
 }

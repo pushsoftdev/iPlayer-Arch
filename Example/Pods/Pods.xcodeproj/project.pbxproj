@@ -7,288 +7,361 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12D1B08B1F723BE15FD5A229C4AA87AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		17E890003AF3E787C567BCC4F03EA0C2 /* Pods-iPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */; };
-		1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D4212B6B060026FA45 /* iPlayer.swift */; };
-		1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */; };
-		53A17277ADC29ED6C4FD8DC47E00AA2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		547A7CF9D6E9055BA94BD798A0D3B7A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		57DC6CF3BD75BA42A910841353F257BA /* Pods-iPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F690FE7228334971F2B2FD74A8F19118 /* Pods-iPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		628AF4A4C6870F33F186F1D7A19219C0 /* Pods-iPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B41AB44235CB43B38697974010000C9 /* Pods-iPlayer_Tests-dummy.m */; };
-		6B939777E05DBA97E617D7CB55EBE933 /* iPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6CFC4E6774439635156616E26994A4 /* iPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A489820730B8B92D8E9D71172E17BCDC /* Pods-iPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40EEF1F2820BD8CFE7AD3D2796097EA0 /* Pods-iPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C593B4A0ECB2F9FF646F19F6E73AA3BF /* iPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1479F430089CECA209881D97221F3B /* iPlayer-dummy.m */; };
+		17A82766BD3FDD1297384A53BEE00271 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		2C103F9CC14C16CB41F7E183C7D09317 /* IP.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 862257ECE7CDECBAC1E0B5F20E711F7A /* IP.xcassets */; };
+		36018CFECCC2BA0669E2A0D208C92AF4 /* Pods-iPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1318FC1C7636C6FA067816E09E877DB3 /* Pods-iPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3823A59D14ACF4FEDE2AD22FBCE70264 /* iPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBB842F389E870BD25EB3AAB9252055 /* iPlayer-dummy.m */; };
+		7166297FE02CC42B1358BFC24B749650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		7A88E2639409EA5FF4AB1B7CA486AD7B /* iPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A492C49C4D250BBEDBE725B152815B28 /* iPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CB5835E7C72D95D0D93D5A1EA5FBBCE /* Pods-iPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 543004A8318C16F49DF99B6C03152217 /* Pods-iPlayer_Example-dummy.m */; };
+		A21DB565978F35251E88653D3F42A5D6 /* iPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E42C4F35AB28B555A0A7197826A295 /* iPlayer.swift */; };
+		B72BFDF3BB81FBDEB7283A7EC98010B1 /* Pods-iPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA0910882771EE95F2309E0E43E0F83 /* Pods-iPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D08E14DD924DE30E9E712E3032C7DB89 /* IPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B7F3C317F8C5A72274B4F4455E1A7D /* IPlayerView.swift */; };
+		D731A9E78CF68A12017945D4A955B5B5 /* iPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1C85D2489490F64EA65A93F4A7AF1FDE /* iPlayerView.bundle */; };
+		D76776F20A4C3FBA64A26414ED1474F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		F13DBFD068E7C039EBACF27980489897 /* Pods-iPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C092F6E35F857235A29500520DE628B /* Pods-iPlayer_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9165B262E5787E6733E224157BD1FA45 /* PBXContainerItemProxy */ = {
+		11D1A2B7E538F376C60220A6162070FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8363B3F3AF11C6F894A8C6F486DC9E4B;
+			remoteGlobalIDString = E12B9A721C00512FEC9AEE3EDC5884F4;
 			remoteInfo = iPlayer;
+		};
+		3EF6B9A7AD4503F870B4CD165388FAD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12E9527063B12E63AA407E064519650D;
+			remoteInfo = "iPlayer-iPlayerView";
+		};
+		C8D8412B1876AFE47366379BBC59E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5694834CEBC2957FA912E7B569A546DE;
+			remoteInfo = "Pods-iPlayer_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13C3EEAF317D5BCA04DF2A17FC7D55FB /* Pods-iPlayer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1F5FD6D4212B6B060026FA45 /* iPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPlayer.swift; path = iPlayer/iPlayer.swift; sourceTree = "<group>"; };
-		1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IPlayerView.swift; path = iPlayer/IPlayerView.swift; sourceTree = "<group>"; };
-		33E1A0DB8CC740589DF14263C5A25967 /* Pods_iPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3640598D170F4A2643B4EBDE93CCBE36 /* Pods-iPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-resources.sh"; sourceTree = "<group>"; };
-		3AB9539709883024B50854B356E38BFD /* iPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-prefix.pch"; sourceTree = "<group>"; };
-		40EEF1F2820BD8CFE7AD3D2796097EA0 /* Pods-iPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
-		47D16481CABD94B179A9C258B3B40785 /* Pods-iPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4F60F9829F66CC521037AFC950E09232 /* Pods-iPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPlayer_Tests.modulemap"; sourceTree = "<group>"; };
-		5B41AB44235CB43B38697974010000C9 /* Pods-iPlayer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPlayer_Tests-dummy.m"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6B1479F430089CECA209881D97221F3B /* iPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPlayer-dummy.m"; sourceTree = "<group>"; };
-		705FB4A8EF61C96ADA632A290428D04A /* Pods-iPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7675A17E7EDBD152BE75435364DEC0C8 /* Pods-iPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7D9005F1DB80F369880B155AEA7AB99D /* Pods-iPlayer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-resources.sh"; sourceTree = "<group>"; };
-		8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPlayer.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; };
-		A2F97F19E53C6D3EB51CC644BDCCD3EE /* Pods-iPlayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPlayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A4C094CA6BABAC0840F653D8DA966CB7 /* iPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD91C00CCEF19B1C64231AEF9A3184C2 /* Pods-iPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iPlayer_Example.modulemap"; sourceTree = "<group>"; };
-		AE942DB18476BB1DB2A2F7AF1C0CAE65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B13F9F5DAFCB802E493951C4891DDD0E /* Pods_iPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPlayer_Example-dummy.m"; sourceTree = "<group>"; };
-		B483CEDA079C6B311A9529B8AA6FA34E /* iPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iPlayer.modulemap; sourceTree = "<group>"; };
-		B9E93B8831E2C2AA982D6C2994F6518B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA6CFC4E6774439635156616E26994A4 /* iPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-umbrella.h"; sourceTree = "<group>"; };
-		DEDAC9F228EDF0FF7BDD82E876736A2A /* Pods-iPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E09A88B2C40DB073716FB655486C81C3 /* Pods-iPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E4E5C651A0EDEE4B5A40E82E01FA6141 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E88BAB292ECB6AFD663231FDEEF82A85 /* Pods-iPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EBC0E7BDE3B91D1BE4462474CF7F5E5D /* Pods-iPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F1ADDE4FE9263A613847D62CE4881D9A /* Pods-iPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F690FE7228334971F2B2FD74A8F19118 /* Pods-iPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		01BB823C0DBC875AF8E356F84B8060F5 /* Pods-iPlayer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-resources.sh"; sourceTree = "<group>"; };
+		04D6A32DCF7CB3EFE4081163AC14ECCD /* Pods-iPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-resources.sh"; sourceTree = "<group>"; };
+		06338498654A4D283B3D886DC3AABDB0 /* Pods-iPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPlayer_Tests.modulemap"; sourceTree = "<group>"; };
+		0742D3B8CF6BFEB4B982CB13061EC46D /* Pods-iPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1318FC1C7636C6FA067816E09E877DB3 /* Pods-iPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
+		1C85D2489490F64EA65A93F4A7AF1FDE /* iPlayerView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = iPlayerView.bundle; path = "iPlayer-iPlayerView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAB5CFD52DC1E905C6DB85400DAB731 /* Pods-iPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E6D31716FCB5A3579D1C87034ABF667 /* Pods_iPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iPlayer_Example.framework; path = "Pods-iPlayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30FB209EE1F6BA79FE6BC3337581090F /* iPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iPlayer.modulemap; sourceTree = "<group>"; };
+		3418FBC65D116F4A0F69177ABE750683 /* Pods-iPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		41B98B8598DD28F121E7D7546CFF9190 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPlayer.xcconfig; sourceTree = "<group>"; };
+		543004A8318C16F49DF99B6C03152217 /* Pods-iPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPlayer_Example-dummy.m"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5B691C14EA6EBDD87E972EAE1829803A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		66D07C70A8F7C81FAAEAA9C2A842AF9A /* iPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = iPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6BAEF79EB2A165810D57B4BA17151E97 /* iPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iPlayer.framework; path = iPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C7B41F4B49B9DE4C448B2ADEC89CDF1 /* iPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-prefix.pch"; sourceTree = "<group>"; };
+		736D501CF32CD6D22DB2DEE91FAEBD98 /* Pods-iPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		748E0717E96B2E7B00E325CB05DD5B63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7633328DDE32C16BF81A1F600AF245E3 /* Pods-iPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8544D49A6F190BC1C3DAE1D0D48DF26C /* ResourceBundle-iPlayerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-iPlayerView-Info.plist"; sourceTree = "<group>"; };
+		862257ECE7CDECBAC1E0B5F20E711F7A /* IP.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = IP.xcassets; path = iPlayer/Assets/IP.xcassets; sourceTree = "<group>"; };
+		89FBE58DE3C99E1E80A2AE9EF043BA79 /* Pods-iPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8C092F6E35F857235A29500520DE628B /* Pods-iPlayer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPlayer_Tests-dummy.m"; sourceTree = "<group>"; };
+		8FBB842F389E870BD25EB3AAB9252055 /* iPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPlayer-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		948632220489A711FF126DA0C98CB90B /* Pods-iPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPlayer_Example.modulemap"; sourceTree = "<group>"; };
+		A3B248192FD39A7FB1A20510470D5323 /* Pods-iPlayer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPlayer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		A492C49C4D250BBEDBE725B152815B28 /* iPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPlayer-umbrella.h"; sourceTree = "<group>"; };
+		B8E42C4F35AB28B555A0A7197826A295 /* iPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iPlayer.swift; path = iPlayer/iPlayer.swift; sourceTree = "<group>"; };
+		B973EF429F1795AA54D60A45D90FD8DE /* Pods-iPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C1BE2EB7327C4BCEAACC95E1A7DA9610 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B7F3C317F8C5A72274B4F4455E1A7D /* IPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPlayerView.swift; path = iPlayer/IPlayerView.swift; sourceTree = "<group>"; };
+		CD751736960065B395C915788BE2CDC0 /* Pods_iPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iPlayer_Tests.framework; path = "Pods-iPlayer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF8F32EF202C578AC87DA4B2254B4928 /* Pods-iPlayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPlayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EBA0910882771EE95F2309E0E43E0F83 /* Pods-iPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F0BC4A630D3063F0A3EF14A944A5323F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F6E1F2B4FC5644308891D651B5AE0A9F /* Pods-iPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33A2D90CAE06F017B2734D7E50901174 /* Frameworks */ = {
+		11E4063EFDF7A2512EE49304F90F96D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547A7CF9D6E9055BA94BD798A0D3B7A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37F02A7AB3E7C36E10F5E07B4E54F320 /* Frameworks */ = {
+		2E35B540EDF75E42AC96E7F880BFBBA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53A17277ADC29ED6C4FD8DC47E00AA2B /* Foundation.framework in Frameworks */,
+				7166297FE02CC42B1358BFC24B749650 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79D775A299635D1EF8D8D8C35D9D2D2B /* Frameworks */ = {
+		DDD28C480408D59E8DE631A8BB59BAE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D1B08B1F723BE15FD5A229C4AA87AC /* Foundation.framework in Frameworks */,
+				D76776F20A4C3FBA64A26414ED1474F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE9E8709A6EEC09694501B78752DDD24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A82766BD3FDD1297384A53BEE00271 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F0A035DE670921F214B5C8148F20C1E /* Development Pods */ = {
+		08EE8ADFBF3B510C1CFFEA927A969DE3 /* Pods-iPlayer_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7D7307E1F18CDD1668A8E2A462BC9A45 /* iPlayer */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		5204D43886B7795539EDE963963B7ED4 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DA6FECFBCF330166C33401A3888CBED6 /* Pods-iPlayer_Example */,
-				5495309ADE3F282907C7DE2AA800D846 /* Pods-iPlayer_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5495309ADE3F282907C7DE2AA800D846 /* Pods-iPlayer_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				B9E93B8831E2C2AA982D6C2994F6518B /* Info.plist */,
-				4F60F9829F66CC521037AFC950E09232 /* Pods-iPlayer_Tests.modulemap */,
-				7675A17E7EDBD152BE75435364DEC0C8 /* Pods-iPlayer_Tests-acknowledgements.markdown */,
-				A2F97F19E53C6D3EB51CC644BDCCD3EE /* Pods-iPlayer_Tests-acknowledgements.plist */,
-				5B41AB44235CB43B38697974010000C9 /* Pods-iPlayer_Tests-dummy.m */,
-				13C3EEAF317D5BCA04DF2A17FC7D55FB /* Pods-iPlayer_Tests-frameworks.sh */,
-				7D9005F1DB80F369880B155AEA7AB99D /* Pods-iPlayer_Tests-resources.sh */,
-				F690FE7228334971F2B2FD74A8F19118 /* Pods-iPlayer_Tests-umbrella.h */,
-				47D16481CABD94B179A9C258B3B40785 /* Pods-iPlayer_Tests.debug.xcconfig */,
-				705FB4A8EF61C96ADA632A290428D04A /* Pods-iPlayer_Tests.release.xcconfig */,
+				41B98B8598DD28F121E7D7546CFF9190 /* Info.plist */,
+				06338498654A4D283B3D886DC3AABDB0 /* Pods-iPlayer_Tests.modulemap */,
+				0742D3B8CF6BFEB4B982CB13061EC46D /* Pods-iPlayer_Tests-acknowledgements.markdown */,
+				CF8F32EF202C578AC87DA4B2254B4928 /* Pods-iPlayer_Tests-acknowledgements.plist */,
+				8C092F6E35F857235A29500520DE628B /* Pods-iPlayer_Tests-dummy.m */,
+				A3B248192FD39A7FB1A20510470D5323 /* Pods-iPlayer_Tests-frameworks.sh */,
+				01BB823C0DBC875AF8E356F84B8060F5 /* Pods-iPlayer_Tests-resources.sh */,
+				EBA0910882771EE95F2309E0E43E0F83 /* Pods-iPlayer_Tests-umbrella.h */,
+				1FAB5CFD52DC1E905C6DB85400DAB731 /* Pods-iPlayer_Tests.debug.xcconfig */,
+				7633328DDE32C16BF81A1F600AF245E3 /* Pods-iPlayer_Tests.release.xcconfig */,
 			);
 			name = "Pods-iPlayer_Tests";
 			path = "Target Support Files/Pods-iPlayer_Tests";
 			sourceTree = "<group>";
 		};
-		7D7307E1F18CDD1668A8E2A462BC9A45 /* iPlayer */ = {
+		1D7F6E91B241CE104E610A1F4D0C7271 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1F5FD6D4212B6B060026FA45 /* iPlayer.swift */,
-				1F5FD6D6212B6B060026FA45 /* IPlayerView.swift */,
-				B3145330693E90CD9E706DA4BBA63BE4 /* Support Files */,
+				66D07C70A8F7C81FAAEAA9C2A842AF9A /* iPlayer.podspec */,
+				F0BC4A630D3063F0A3EF14A944A5323F /* LICENSE */,
+				5B691C14EA6EBDD87E972EAE1829803A /* README.md */,
 			);
-			name = iPlayer;
-			path = ../..;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		2AE7434398EBB999DB6B1BCA4110C669 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BAEF79EB2A165810D57B4BA17151E97 /* iPlayer.framework */,
+				1C85D2489490F64EA65A93F4A7AF1FDE /* iPlayerView.bundle */,
+				2E6D31716FCB5A3579D1C87034ABF667 /* Pods_iPlayer_Example.framework */,
+				CD751736960065B395C915788BE2CDC0 /* Pods_iPlayer_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5204D43886B7795539EDE963963B7ED4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				669F4A81B11059889D44CD38D61E0D46 /* Pods-iPlayer_Example */,
+				08EE8ADFBF3B510C1CFFEA927A969DE3 /* Pods-iPlayer_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		52F080983107725D356C7018483D1F1C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				866861E51DFB51C1C9ADB1101A347979 /* iPlayer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		669F4A81B11059889D44CD38D61E0D46 /* Pods-iPlayer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				748E0717E96B2E7B00E325CB05DD5B63 /* Info.plist */,
+				948632220489A711FF126DA0C98CB90B /* Pods-iPlayer_Example.modulemap */,
+				F6E1F2B4FC5644308891D651B5AE0A9F /* Pods-iPlayer_Example-acknowledgements.markdown */,
+				B973EF429F1795AA54D60A45D90FD8DE /* Pods-iPlayer_Example-acknowledgements.plist */,
+				543004A8318C16F49DF99B6C03152217 /* Pods-iPlayer_Example-dummy.m */,
+				3418FBC65D116F4A0F69177ABE750683 /* Pods-iPlayer_Example-frameworks.sh */,
+				04D6A32DCF7CB3EFE4081163AC14ECCD /* Pods-iPlayer_Example-resources.sh */,
+				1318FC1C7636C6FA067816E09E877DB3 /* Pods-iPlayer_Example-umbrella.h */,
+				736D501CF32CD6D22DB2DEE91FAEBD98 /* Pods-iPlayer_Example.debug.xcconfig */,
+				89FBE58DE3C99E1E80A2AE9EF043BA79 /* Pods-iPlayer_Example.release.xcconfig */,
+			);
+			name = "Pods-iPlayer_Example";
+			path = "Target Support Files/Pods-iPlayer_Example";
+			sourceTree = "<group>";
+		};
+		7A68BB9F08FD47F717C3D02BCE28FE21 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1BE2EB7327C4BCEAACC95E1A7DA9610 /* Info.plist */,
+				30FB209EE1F6BA79FE6BC3337581090F /* iPlayer.modulemap */,
+				504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */,
+				8FBB842F389E870BD25EB3AAB9252055 /* iPlayer-dummy.m */,
+				6C7B41F4B49B9DE4C448B2ADEC89CDF1 /* iPlayer-prefix.pch */,
+				A492C49C4D250BBEDBE725B152815B28 /* iPlayer-umbrella.h */,
+				8544D49A6F190BC1C3DAE1D0D48DF26C /* ResourceBundle-iPlayerView-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/iPlayer";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3F0A035DE670921F214B5C8148F20C1E /* Development Pods */,
+				52F080983107725D356C7018483D1F1C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B3E229F53D79E1CE44503DDB108AE5F8 /* Products */,
+				2AE7434398EBB999DB6B1BCA4110C669 /* Products */,
 				5204D43886B7795539EDE963963B7ED4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B3145330693E90CD9E706DA4BBA63BE4 /* Support Files */ = {
+		866861E51DFB51C1C9ADB1101A347979 /* iPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				AE942DB18476BB1DB2A2F7AF1C0CAE65 /* Info.plist */,
-				B483CEDA079C6B311A9529B8AA6FA34E /* iPlayer.modulemap */,
-				8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */,
-				6B1479F430089CECA209881D97221F3B /* iPlayer-dummy.m */,
-				3AB9539709883024B50854B356E38BFD /* iPlayer-prefix.pch */,
-				DA6CFC4E6774439635156616E26994A4 /* iPlayer-umbrella.h */,
+				B8E42C4F35AB28B555A0A7197826A295 /* iPlayer.swift */,
+				C8B7F3C317F8C5A72274B4F4455E1A7D /* IPlayerView.swift */,
+				1D7F6E91B241CE104E610A1F4D0C7271 /* Pod */,
+				D1B7394FB0C9668F38B479CC4F268007 /* Resources */,
+				7A68BB9F08FD47F717C3D02BCE28FE21 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/iPlayer";
-			sourceTree = "<group>";
-		};
-		B3E229F53D79E1CE44503DDB108AE5F8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A4C094CA6BABAC0840F653D8DA966CB7 /* iPlayer.framework */,
-				33E1A0DB8CC740589DF14263C5A25967 /* Pods_iPlayer_Example.framework */,
-				B13F9F5DAFCB802E493951C4891DDD0E /* Pods_iPlayer_Tests.framework */,
-			);
-			name = Products;
+			name = iPlayer;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		D1B7394FB0C9668F38B479CC4F268007 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				862257ECE7CDECBAC1E0B5F20E711F7A /* IP.xcassets */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		DA6FECFBCF330166C33401A3888CBED6 /* Pods-iPlayer_Example */ = {
-			isa = PBXGroup;
-			children = (
-				E4E5C651A0EDEE4B5A40E82E01FA6141 /* Info.plist */,
-				AD91C00CCEF19B1C64231AEF9A3184C2 /* Pods-iPlayer_Example.modulemap */,
-				E88BAB292ECB6AFD663231FDEEF82A85 /* Pods-iPlayer_Example-acknowledgements.markdown */,
-				EBC0E7BDE3B91D1BE4462474CF7F5E5D /* Pods-iPlayer_Example-acknowledgements.plist */,
-				B1B2F1C5D3E6CBECFEB41E9E9950B1C2 /* Pods-iPlayer_Example-dummy.m */,
-				F1ADDE4FE9263A613847D62CE4881D9A /* Pods-iPlayer_Example-frameworks.sh */,
-				3640598D170F4A2643B4EBDE93CCBE36 /* Pods-iPlayer_Example-resources.sh */,
-				40EEF1F2820BD8CFE7AD3D2796097EA0 /* Pods-iPlayer_Example-umbrella.h */,
-				DEDAC9F228EDF0FF7BDD82E876736A2A /* Pods-iPlayer_Example.debug.xcconfig */,
-				E09A88B2C40DB073716FB655486C81C3 /* Pods-iPlayer_Example.release.xcconfig */,
-			);
-			name = "Pods-iPlayer_Example";
-			path = "Target Support Files/Pods-iPlayer_Example";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8C1CB93746D426F3CF4327347ECD3B93 /* Headers */ = {
+		12DE5805CE31C7EDDCDAB665ACCA3582 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57DC6CF3BD75BA42A910841353F257BA /* Pods-iPlayer_Tests-umbrella.h in Headers */,
+				36018CFECCC2BA0669E2A0D208C92AF4 /* Pods-iPlayer_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2296D675788E374E6F2810E1B8D8F32 /* Headers */ = {
+		1F8E013ECA4990453868E1624713781F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B939777E05DBA97E617D7CB55EBE933 /* iPlayer-umbrella.h in Headers */,
+				7A88E2639409EA5FF4AB1B7CA486AD7B /* iPlayer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F406A4CF80C3057D130DE491071912A8 /* Headers */ = {
+		7BC1BD60E6A945330D60296D761A8273 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A489820730B8B92D8E9D71172E17BCDC /* Pods-iPlayer_Example-umbrella.h in Headers */,
+				B72BFDF3BB81FBDEB7283A7EC98010B1 /* Pods-iPlayer_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8363B3F3AF11C6F894A8C6F486DC9E4B /* iPlayer */ = {
+		12E9527063B12E63AA407E064519650D /* iPlayer-iPlayerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 344BE02242DED0B2606334CE7DABD06B /* Build configuration list for PBXNativeTarget "iPlayer" */;
+			buildConfigurationList = B48034F928C6F5936C1C43FCAAE73284 /* Build configuration list for PBXNativeTarget "iPlayer-iPlayerView" */;
 			buildPhases = (
-				8D31028909FBA18DAB1F007E22C868F8 /* Sources */,
-				33A2D90CAE06F017B2734D7E50901174 /* Frameworks */,
-				D2296D675788E374E6F2810E1B8D8F32 /* Headers */,
+				FEA066916E00945E1E840B8C33182A22 /* Sources */,
+				11E4063EFDF7A2512EE49304F90F96D4 /* Frameworks */,
+				7BD1B75A2D0561D0BB479599FD55E8DF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iPlayer;
-			productName = iPlayer;
-			productReference = A4C094CA6BABAC0840F653D8DA966CB7 /* iPlayer.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "iPlayer-iPlayerView";
+			productName = "iPlayer-iPlayerView";
+			productReference = 1C85D2489490F64EA65A93F4A7AF1FDE /* iPlayerView.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
-		9911D50F845DE37314CC5338EFBF6DA6 /* Pods-iPlayer_Tests */ = {
+		43363B9CB42553F8CF491BB5AD1BA03C /* Pods-iPlayer_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A239514B1C58BE23FB67707D700BBF88 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Tests" */;
+			buildConfigurationList = 888EB8EC8CFAFED0A18A093525E53AC8 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Tests" */;
 			buildPhases = (
-				15B01E36CFD6D6A57E13625EEB8808C8 /* Sources */,
-				79D775A299635D1EF8D8D8C35D9D2D2B /* Frameworks */,
-				8C1CB93746D426F3CF4327347ECD3B93 /* Headers */,
+				7BC1BD60E6A945330D60296D761A8273 /* Headers */,
+				EE003948A7314F8CF6C4FC5F04F9C5B6 /* Sources */,
+				2E35B540EDF75E42AC96E7F880BFBBA7 /* Frameworks */,
+				9271B40A38B8A463AD2E065EB21C3CAB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9EF5FBC7DE66256709CAE46D34795CE /* PBXTargetDependency */,
 			);
 			name = "Pods-iPlayer_Tests";
 			productName = "Pods-iPlayer_Tests";
-			productReference = B13F9F5DAFCB802E493951C4891DDD0E /* Pods_iPlayer_Tests.framework */;
+			productReference = CD751736960065B395C915788BE2CDC0 /* Pods_iPlayer_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FE0062F7A23BA68510D9BCFC3A0EC532 /* Pods-iPlayer_Example */ = {
+		5694834CEBC2957FA912E7B569A546DE /* Pods-iPlayer_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D96512C25DBFBBD58389F22969EE0D0 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Example" */;
+			buildConfigurationList = 7D34647EADCC5A317AE133771C462BBE /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Example" */;
 			buildPhases = (
-				F55D77CB32C6242DD6CBE2DB1C733995 /* Sources */,
-				37F02A7AB3E7C36E10F5E07B4E54F320 /* Frameworks */,
-				F406A4CF80C3057D130DE491071912A8 /* Headers */,
+				12DE5805CE31C7EDDCDAB665ACCA3582 /* Headers */,
+				AC5DFA42E0F56C605B096756D48B9DF8 /* Sources */,
+				FE9E8709A6EEC09694501B78752DDD24 /* Frameworks */,
+				BF3783D3345BEEF42B91A06690D715B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				05737136FD9AB1AC051A58489E2D83CD /* PBXTargetDependency */,
+				8B9FDAE9F29A2DCB5C508E13FC34153D /* PBXTargetDependency */,
 			);
 			name = "Pods-iPlayer_Example";
 			productName = "Pods-iPlayer_Example";
-			productReference = 33E1A0DB8CC740589DF14263C5A25967 /* Pods_iPlayer_Example.framework */;
+			productReference = 2E6D31716FCB5A3579D1C87034ABF667 /* Pods_iPlayer_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E12B9A721C00512FEC9AEE3EDC5884F4 /* iPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B495C1EDD5CDB20B1D683948E2C6D2B /* Build configuration list for PBXNativeTarget "iPlayer" */;
+			buildPhases = (
+				1F8E013ECA4990453868E1624713781F /* Headers */,
+				A90C4610F4511E1856D3802A08F7E5D4 /* Sources */,
+				DDD28C480408D59E8DE631A8BB59BAE7 /* Frameworks */,
+				2CECB6189D02A0D0AF10BD029CADB58B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E267DE85C2BC122BCCCFCA53C2517A4E /* PBXTargetDependency */,
+			);
+			name = iPlayer;
+			productName = iPlayer;
+			productReference = 6BAEF79EB2A165810D57B4BA17151E97 /* iPlayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -297,13 +370,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0940;
-				TargetAttributes = {
-					8363B3F3AF11C6F894A8C6F486DC9E4B = {
-						LastSwiftMigration = 0940;
-					};
-				};
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -313,60 +381,165 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B3E229F53D79E1CE44503DDB108AE5F8 /* Products */;
+			productRefGroup = 2AE7434398EBB999DB6B1BCA4110C669 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8363B3F3AF11C6F894A8C6F486DC9E4B /* iPlayer */,
-				FE0062F7A23BA68510D9BCFC3A0EC532 /* Pods-iPlayer_Example */,
-				9911D50F845DE37314CC5338EFBF6DA6 /* Pods-iPlayer_Tests */,
+				E12B9A721C00512FEC9AEE3EDC5884F4 /* iPlayer */,
+				12E9527063B12E63AA407E064519650D /* iPlayer-iPlayerView */,
+				5694834CEBC2957FA912E7B569A546DE /* Pods-iPlayer_Example */,
+				43363B9CB42553F8CF491BB5AD1BA03C /* Pods-iPlayer_Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2CECB6189D02A0D0AF10BD029CADB58B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D731A9E78CF68A12017945D4A955B5B5 /* iPlayerView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD1B75A2D0561D0BB479599FD55E8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C103F9CC14C16CB41F7E183C7D09317 /* IP.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9271B40A38B8A463AD2E065EB21C3CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3783D3345BEEF42B91A06690D715B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		15B01E36CFD6D6A57E13625EEB8808C8 /* Sources */ = {
+		A90C4610F4511E1856D3802A08F7E5D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				628AF4A4C6870F33F186F1D7A19219C0 /* Pods-iPlayer_Tests-dummy.m in Sources */,
+				3823A59D14ACF4FEDE2AD22FBCE70264 /* iPlayer-dummy.m in Sources */,
+				A21DB565978F35251E88653D3F42A5D6 /* iPlayer.swift in Sources */,
+				D08E14DD924DE30E9E712E3032C7DB89 /* IPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D31028909FBA18DAB1F007E22C868F8 /* Sources */ = {
+		AC5DFA42E0F56C605B096756D48B9DF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5FD6D9212B6B060026FA45 /* IPlayerView.swift in Sources */,
-				1F5FD6D7212B6B060026FA45 /* iPlayer.swift in Sources */,
-				C593B4A0ECB2F9FF646F19F6E73AA3BF /* iPlayer-dummy.m in Sources */,
+				9CB5835E7C72D95D0D93D5A1EA5FBBCE /* Pods-iPlayer_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F55D77CB32C6242DD6CBE2DB1C733995 /* Sources */ = {
+		EE003948A7314F8CF6C4FC5F04F9C5B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E890003AF3E787C567BCC4F03EA0C2 /* Pods-iPlayer_Example-dummy.m in Sources */,
+				F13DBFD068E7C039EBACF27980489897 /* Pods-iPlayer_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEA066916E00945E1E840B8C33182A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		05737136FD9AB1AC051A58489E2D83CD /* PBXTargetDependency */ = {
+		8B9FDAE9F29A2DCB5C508E13FC34153D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iPlayer;
-			target = 8363B3F3AF11C6F894A8C6F486DC9E4B /* iPlayer */;
-			targetProxy = 9165B262E5787E6733E224157BD1FA45 /* PBXContainerItemProxy */;
+			target = E12B9A721C00512FEC9AEE3EDC5884F4 /* iPlayer */;
+			targetProxy = 11D1A2B7E538F376C60220A6162070FA /* PBXContainerItemProxy */;
+		};
+		A9EF5FBC7DE66256709CAE46D34795CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-iPlayer_Example";
+			target = 5694834CEBC2957FA912E7B569A546DE /* Pods-iPlayer_Example */;
+			targetProxy = C8D8412B1876AFE47366379BBC59E25D /* PBXContainerItemProxy */;
+		};
+		E267DE85C2BC122BCCCFCA53C2517A4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iPlayer-iPlayerView";
+			target = 12E9527063B12E63AA407E064519650D /* iPlayer-iPlayerView */;
+			targetProxy = 3EF6B9A7AD4503F870B4CD165388FAD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		21E92A719286D0F8F96026CAEB76EC9A /* Debug */ = {
+		0AAB892884E3EBDCD757788FE351B643 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47D16481CABD94B179A9C258B3B40785 /* Pods-iPlayer_Tests.debug.xcconfig */;
+			baseConfigurationReference = 504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iPlayer";
+				INFOPLIST_FILE = "Target Support Files/iPlayer/ResourceBundle-iPlayerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = iPlayerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		16655FF1CF9E8A32355F1DE26C42C869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 736D501CF32CD6D22DB2DEE91FAEBD98 /* Pods-iPlayer_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C9D58739FCC43597C45DA247E909FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FAB5CFD52DC1E905C6DB85400DAB731 /* Pods-iPlayer_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -386,7 +559,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPlayer_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,7 +568,7 @@
 			};
 			name = Debug;
 		};
-		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+		56A05ADD3BABDA1B56D1F979845809B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -405,6 +578,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -426,6 +600,184 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5BA43442F4D5B0FDDF9B0FE957434C60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iPlayer";
+				INFOPLIST_FILE = "Target Support Files/iPlayer/ResourceBundle-iPlayerView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = iPlayerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7406CC008F6813499246F95FC543FF77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7633328DDE32C16BF81A1F600AF245E3 /* Pods-iPlayer_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Tests/Pods-iPlayer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7DFAB93A1AF6D0F7A4307061C452DEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FBE58DE3C99E1E80A2AE9EF043BA79 /* Pods-iPlayer_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		959F6927E1EE7BCB16888D2923BC6986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iPlayer/iPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iPlayer/iPlayer.modulemap";
+				PRODUCT_MODULE_NAME = iPlayer;
+				PRODUCT_NAME = iPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEFDB93BF207328A04F1220475D02C3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -447,55 +799,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		3FD61A4F184D234221BF36D9BAD924B6 /* Release */ = {
+		DFD0F26A96DD3B718AD936CBF848BB4B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E09A88B2C40DB073716FB655486C81C3 /* Pods-iPlayer_Example.release.xcconfig */;
+			baseConfigurationReference = 504B74616D4C8ED26C9ECDA1A41E8F07 /* iPlayer.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPlayer_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5897674DE1E0DD8733B8164171592308 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -508,178 +825,23 @@
 				GCC_PREFIX_HEADER = "Target Support Files/iPlayer/iPlayer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/iPlayer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/iPlayer/iPlayer.modulemap";
+				PRODUCT_MODULE_NAME = iPlayer;
 				PRODUCT_NAME = iPlayer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6B041244A0961B089EC748D3B6283F82 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 705FB4A8EF61C96ADA632A290428D04A /* Pods-iPlayer_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Tests/Pods-iPlayer_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPlayer_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7272BE21DCCCE6DFA7B072CBC83E4CD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EFF9D353F0D4BF5B23D5FBB04057A73 /* iPlayer.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iPlayer/iPlayer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iPlayer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iPlayer/iPlayer.modulemap";
-				PRODUCT_NAME = iPlayer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D58EC83C91393FD7A9F19D4BE3060952 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEDAC9F228EDF0FF7BDD82E876736A2A /* Pods-iPlayer_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iPlayer_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iPlayer_Example/Pods-iPlayer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_iPlayer_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -687,35 +849,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
-				731DC216E1A58545B559F6E0A2418060 /* Release */,
+				BEFDB93BF207328A04F1220475D02C3B /* Debug */,
+				56A05ADD3BABDA1B56D1F979845809B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		344BE02242DED0B2606334CE7DABD06B /* Build configuration list for PBXNativeTarget "iPlayer" */ = {
+		3B495C1EDD5CDB20B1D683948E2C6D2B /* Build configuration list for PBXNativeTarget "iPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5897674DE1E0DD8733B8164171592308 /* Debug */,
-				7272BE21DCCCE6DFA7B072CBC83E4CD4 /* Release */,
+				959F6927E1EE7BCB16888D2923BC6986 /* Debug */,
+				DFD0F26A96DD3B718AD936CBF848BB4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D96512C25DBFBBD58389F22969EE0D0 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Example" */ = {
+		7D34647EADCC5A317AE133771C462BBE /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D58EC83C91393FD7A9F19D4BE3060952 /* Debug */,
-				3FD61A4F184D234221BF36D9BAD924B6 /* Release */,
+				16655FF1CF9E8A32355F1DE26C42C869 /* Debug */,
+				7DFAB93A1AF6D0F7A4307061C452DEB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A239514B1C58BE23FB67707D700BBF88 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Tests" */ = {
+		888EB8EC8CFAFED0A18A093525E53AC8 /* Build configuration list for PBXNativeTarget "Pods-iPlayer_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21E92A719286D0F8F96026CAEB76EC9A /* Debug */,
-				6B041244A0961B089EC748D3B6283F82 /* Release */,
+				2C9D58739FCC43597C45DA247E909FA1 /* Debug */,
+				7406CC008F6813499246F95FC543FF77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B48034F928C6F5936C1C43FCAAE73284 /* Build configuration list for PBXNativeTarget "iPlayer-iPlayerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA43442F4D5B0FDDF9B0FE957434C60 /* Debug */,
+				0AAB892884E3EBDCD757788FE351B643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

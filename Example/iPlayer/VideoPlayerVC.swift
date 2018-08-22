@@ -44,7 +44,15 @@ class VideoPlayerVC: UIViewController {
   }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    viewPlayerDisplay.updateForOrientation(orientation: UIDevice.current.orientation)
+    let orientation = UIDevice.current.orientation
+//    let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+//    if orientation == .landscapeLeft || orientation == .landscapeRight {
+//
+//    } else if orientation == .portrait {
+//      
+//    }
+    
+    viewPlayerDisplay.updateForOrientation(orientation: orientation)
   }
   
   

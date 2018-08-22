@@ -51,6 +51,10 @@ public class IPlayerView: UIView {
     }
   }
   
+  private var sliderThumb: UIImage {
+    return imageWithName(name: "slider_thumb")!
+  }
+  
   // Constraints
   private var constraintBottomViewBottomToSuperView: NSLayoutConstraint!
   
@@ -63,6 +67,18 @@ public class IPlayerView: UIView {
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     configureUI()
+  }
+  
+  private func imageWithName(name: String) -> UIImage? {
+    let frameworkBundle = Bundle(for: IPlayerView.self)
+    
+    if let bundleURL = frameworkBundle.url(forResource: "iPlayerView", withExtension: "bundle") {
+      let bundle = Bundle(url: bundleURL)
+      let image = UIImage(named: name, in: bundle, compatibleWith: nil)
+      return image
+    }
+    
+    return UIImage()
   }
   
   private func configureUI() {
@@ -92,7 +108,8 @@ public class IPlayerView: UIView {
     configureSlider()
     bottomView.addSubview(sliderDuration)
     
-    buttonPlayPause = UIButton()
+    buttonPlayPause = UIButton(type: .system)
+    buttonPlayPause.tintColor = .white
     buttonPlayPause.translatesAutoresizingMaskIntoConstraints = false
     buttonPlayPause.addTarget(self, action: #selector(buttonPlayPauseHandler), for: .touchUpInside)
     addSubview(buttonPlayPause)
@@ -106,6 +123,8 @@ public class IPlayerView: UIView {
     
     configureTapRecognizer()
     configureDoubleTapRecognizer()
+    
+    updateForOrientation(orientation: UIDevice.current.orientation)
   }
   
   private func configureTapRecognizer() {
@@ -158,6 +177,8 @@ public class IPlayerView: UIView {
     if orientation.isLandscape {
       bottomView.layer.cornerRadius = 10
       constraintBottomViewBottomToSuperView.constant = -10
+      
+      
     } else {
       bottomView.layer.cornerRadius = 0
       constraintBottomViewBottomToSuperView.constant = 0
@@ -176,7 +197,10 @@ public class IPlayerView: UIView {
       UIColor(red: 255.0 / 255.0, green: 255.0 / 255.0, blue: 255.0 / 255.0, alpha: 0.5)
     sliderDuration.minimumTrackTintColor =
       UIColor(red: 204.0 / 255.0, green: 8.0 / 255.0, blue: 8.0 / 255.0, alpha: 1.0)
-    //sliderDuration.thumbTintColor = .clear
+    
+    sliderDuration.setThumbImage(UIImage(), for: .normal)
+    sliderDuration.setThumbImage(sliderThumb, for: .highlighted)
+    sliderDuration.setThumbImage(sliderThumb, for: .selected)
     
     sliderDuration.addTarget(self, action: #selector(sliderValueChangeHandler), for: .valueChanged)
     sliderDuration.addTarget(self, action: #selector(sliderBeginTracking), for: .touchDown)
@@ -215,9 +239,9 @@ public class IPlayerView: UIView {
   private func layoutBottomView() {
      constraintBottomViewBottomToSuperView = NSLayoutConstraint(item: bottomView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
     
-    let constraintBottomViewLeadingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .leadingMargin, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 0)
+    let constraintBottomViewLeadingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .leadingMargin, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 10)
     
-    let constraintBottomViewTrailingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .trailingMargin, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: 0)
+    let constraintBottomViewTrailingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .trailingMargin, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: -10)
     
     addConstraints([constraintBottomViewBottomToSuperView, constraintBottomViewLeadingToSuperView, constraintBottomViewTrailingToSuperView])
   }
@@ -245,13 +269,16 @@ public class IPlayerView: UIView {
   }
   
   private func layoutSlider() {
-    let constraintSliderTopToSuperView = NSLayoutConstraint(item: sliderDuration, attribute: .top, relatedBy: .equal, toItem: bottomView, attribute: .top, multiplier: 1, constant: 5)
+    let constraintSliderTopToSuperView = NSLayoutConstraint(item: sliderDuration, attribute: .top, relatedBy: .equal, toItem: bottomView, attribute: .top, multiplier: 1, constant: 15)
     
-    let constraintSliderBottomToSuperView = NSLayoutConstraint(item: sliderDuration, attribute: .bottom, relatedBy: .equal, toItem: bottomView, attribute: .bottom, multiplier: 1, constant: -5)
+    let constraintSliderBottomToSuperView = NSLayoutConstraint(item: sliderDuration, attribute: .bottom, relatedBy: .equal, toItem: bottomView, attribute: .bottom, multiplier: 1, constant: -15)
     
     let constraintSliderLeadingToElapsedTime = NSLayoutConstraint(item: sliderDuration, attribute: .leading, relatedBy: .equal, toItem: labelElapsedTime, attribute: .trailing, multiplier: 1, constant: 7)
     
     let constraintSliderTrailingToRemainingTime = NSLayoutConstraint(item: sliderDuration, attribute: .trailing, relatedBy: .equal, toItem: labelRemainingTime, attribute: .leading, multiplier: 1, constant: -9)
+    
+    let constraintSliderHeight = NSLayoutConstraint(item: sliderDuration, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 11)
+    sliderDuration.addConstraint(constraintSliderHeight)
     
     bottomView.addConstraints([constraintSliderTopToSuperView, constraintSliderBottomToSuperView, constraintSliderLeadingToElapsedTime, constraintSliderTrailingToRemainingTime])
   }
@@ -288,15 +315,13 @@ public class IPlayerView: UIView {
   }
   
   @objc func sliderBeginTracking() {
-    sliderDuration.thumbTintColor = .red
+    sliderDuration.setThumbImage(sliderThumb, for: .normal)
     iPlayer.pause()
-    print("Slider Begin tracking")
   }
   
   @objc func sliderEndTracking() {
-    sliderDuration.thumbTintColor = .clear
+    sliderDuration.setThumbImage(UIImage(), for: .normal)
     iPlayer.seekTo(time: sliderDuration.value)
-    print("Slider End tracking")
   }
   
   /// Creates the remaining duration of the video.
@@ -345,16 +370,17 @@ extension IPlayerView: IPlayerDelegate {
       buttonPlayPause.isHidden = true
     case .paused, .stopped:
       loader.stopAnimating()
-      buttonPlayPause.setTitle("Play", for: .normal)
+      buttonPlayPause.setImage(imageWithName(name: "media_play"), for: .normal)
       updateControlsVisibility(shouldShow: true)
     case .playing:
       buttonPlayPause.isHidden = false
-      buttonPlayPause.setTitle("Pause", for: .normal)
+      buttonPlayPause.setImage(imageWithName(name: "media_pause"), for: .normal)
       loader.stopAnimating()
     case .end:
-      buttonPlayPause.setTitle("Play", for: .normal)
+      buttonPlayPause.setImage(imageWithName(name: "media_play"), for: .normal)
       updateControlsVisibility(shouldShow: true)
       sliderDuration.value = 1.0
+      sliderDuration.setThumbImage(sliderThumb, for: .normal)
     default:
       break
     }
