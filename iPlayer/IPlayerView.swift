@@ -57,6 +57,13 @@ public class IPlayerView: UIView {
   
   // Constraints
   private var constraintBottomViewBottomToSuperView: NSLayoutConstraint!
+  private var constraintBottomViewLeadingToSuperView: NSLayoutConstraint!
+  private var constraintBottomViewTrailingToSuperView: NSLayoutConstraint!
+  
+  private var bottomViewXMarginPortrait: CGFloat = 0.0
+  private var bottomViewXMarginLandscape: CGFloat = 10.0
+  private var bottomViewBottomMarginPortrait: CGFloat = 0.0
+  private var bottomViewBottomMarginLandscape: CGFloat = -10.0
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -176,12 +183,14 @@ public class IPlayerView: UIView {
   public func updateForOrientation(orientation: UIDeviceOrientation) {
     if orientation.isLandscape {
       bottomView.layer.cornerRadius = 10
-      constraintBottomViewBottomToSuperView.constant = -10
-      
-      
+      constraintBottomViewBottomToSuperView.constant = bottomViewBottomMarginLandscape
+      constraintBottomViewLeadingToSuperView.constant = bottomViewXMarginLandscape
+      constraintBottomViewTrailingToSuperView.constant = -bottomViewXMarginLandscape
     } else {
       bottomView.layer.cornerRadius = 0
-      constraintBottomViewBottomToSuperView.constant = 0
+      constraintBottomViewBottomToSuperView.constant = bottomViewXMarginPortrait
+      constraintBottomViewLeadingToSuperView.constant = bottomViewXMarginPortrait
+      constraintBottomViewTrailingToSuperView.constant = bottomViewXMarginPortrait
     }
   }
   
@@ -239,9 +248,9 @@ public class IPlayerView: UIView {
   private func layoutBottomView() {
      constraintBottomViewBottomToSuperView = NSLayoutConstraint(item: bottomView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
     
-    let constraintBottomViewLeadingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .leadingMargin, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 10)
+    constraintBottomViewLeadingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .leadingMargin, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: bottomViewXMarginPortrait)
     
-    let constraintBottomViewTrailingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .trailingMargin, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: -10)
+    constraintBottomViewTrailingToSuperView = NSLayoutConstraint(item: bottomView, attribute: .trailingMargin, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: bottomViewXMarginPortrait)
     
     addConstraints([constraintBottomViewBottomToSuperView, constraintBottomViewLeadingToSuperView, constraintBottomViewTrailingToSuperView])
   }

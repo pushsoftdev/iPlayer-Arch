@@ -54,8 +54,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5a-5O-UXT" customClass="IPlayerView" customModule="iPlayer">
-                                <rect key="frame" x="0.0" y="20" width="1366" height="768.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5a-5O-UXT" customClass="IPlayerView" customModule="iPlayer">
+                                <rect key="frame" x="0.0" y="20" width="1366" height="1004"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d5a-5O-UXT" secondAttribute="height" multiplier="16:9" priority="900" id="Hwp-ub-BvN"/>
@@ -72,7 +72,7 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="Hwp-ub-BvN"/>
+                                        <include reference="Hwp-ub-BvN"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -104,8 +104,8 @@
                                     <constraint firstItem="zPs-l7-4ar" firstAttribute="leading" secondItem="ipf-tu-8kb" secondAttribute="leadingMargin" constant="16" id="uAX-Oh-5XW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vv-Pb-oiv">
-                                <rect key="frame" x="0.0" y="788.5" width="1366" height="235.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vv-Pb-oiv">
+                                <rect key="frame" x="0.0" y="1024" width="1366" height="0.0"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -140,7 +140,7 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="cZp-vT-Ra3"/>
+                                <include reference="cZp-vT-Ra3"/>
                             </mask>
                         </variation>
                     </view>

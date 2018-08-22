@@ -25,6 +25,8 @@ class VideoPlayerVC: UIViewController {
 
     constraintPlayerViewAspectRatio.isActive = false
     constraintPlayerViewBottomToSuperView.isActive = true
+    
+    handleLayoutForCurrentOrientation()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -44,15 +46,24 @@ class VideoPlayerVC: UIViewController {
   }
   
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    let orientation = UIDevice.current.orientation
-//    let isIPad = UIDevice.current.userInterfaceIdiom == .pad
-//    if orientation == .landscapeLeft || orientation == .landscapeRight {
-//
-//    } else if orientation == .portrait {
-//      
-//    }
     
+    handleLayoutForCurrentOrientation()
+  }
+  
+  private func handleLayoutForCurrentOrientation() {
+    let orientation = UIDevice.current.orientation
     viewPlayerDisplay.updateForOrientation(orientation: orientation)
+    
+    let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+    guard isIPad else { return }
+    
+    if orientation == .landscapeLeft || orientation == .landscapeRight {
+      constraintPlayerViewAspectRatio.priority = UILayoutPriority(rawValue: 900)
+      constraintPlayerViewBottomToSuperView.priority = UILayoutPriority(rawValue: 950)
+    } else if orientation == .portrait {
+      constraintPlayerViewAspectRatio.priority = UILayoutPriority(rawValue: 950)
+      constraintPlayerViewBottomToSuperView.priority = UILayoutPriority(rawValue: 900)
+    }
   }
   
   
